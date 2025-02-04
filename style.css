@@ -91,7 +91,10 @@ body {
 #alasan h4,
 #fitur h1,
 #fitur h5,
-#tema h1 {
+#tema h1,
+#harga h1,
+#tentang_kami h1,
+#tentang_kami h5 {
   font-weight: bold;
   color: var(--text-primary);
 }
@@ -100,7 +103,9 @@ body {
 #alasan p,
 #fitur h6,
 #fitur p,
-#tema h6 {
+#tema h6,
+#harga h6,
+#tentang_kami h6 {
   color: var(--text-secondary);
 }
 
@@ -131,13 +136,13 @@ body {
 
 /* TEMA */
 
-#tema{
+#tema {
   padding-top: 5rem;
   min-height: auto;
 }
 
-#tema button{
-  background-color: var(--color-primary-light-brown);
+#tema button {
+  background-color: var(--bg-primary);
   color: var(--text-primary);
   font-weight: bold;
   border: none;
@@ -150,8 +155,61 @@ body {
   border-radius: 10px;
 }
 
-
 /* TEMA */
+
+/* ================================================================================================================== */
+
+/* HARGA */
+
+#harga {
+  min-height: auto;
+  padding-top: 5rem;
+}
+
+#harga .card {
+  min-height: auto;
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+#harga .via-shopee {
+  background-color: var(--blue);
+  border: none;
+}
+
+#harga .via-shopee:hover {
+  background-color: var(--text-primary);
+}
+
+#harga .via-wa {
+  background-color: var(--blue);
+  border: none;
+}
+
+#harga .via-wa:hover {
+  background-color: var(--text-primary);
+}
+
+/* HARGA */
+
+/* ================================================================================================================== */
+
+/* TENTANG KAMI */
+
+#tentang_kami{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: auto;
+}
+
+#tentang_kami .card {
+  min-height: 220px;
+  min-width: 180px;
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+/* TENTANG KAMI */
 
 /* .footer {
 } */
@@ -206,11 +264,19 @@ body {
 /* mobile phone */
 @media (max-width: 576px) {
   #hero h1,
-  #alasan h1 {
-    font-size: 20px;
+  #alasan h1,
+  #fitur h1,
+  #tema h1,
+  #harga h1,
+  #tentang_kami h1 {
+    font-size: 24px;
   }
   #hero h6,
-  #alasan h6 {
+  #alasan h6,
+  #fitur h6,
+  #tema h6,
+  #harga h6,
+  #tentang_kami h6 {
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 0;
