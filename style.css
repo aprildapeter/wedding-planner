@@ -1,0 +1,249 @@
+:root {
+  --bg-primary: #f8f9fc;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --pink: #f14e95;
+  --color-primary-light-brown: #edc;
+  --text-primary: #2e4374;
+  --text-secondary: #757b89;
+  --text-green: #bad8b6;
+  --text-light-brown: #fffaec;
+  --blue: #1e55b3;
+  --buttonColor: linear-gradient(90deg, #175e9a 0%, #7397f3 100%);
+  --buttonColorHover: linear-gradient(90deg, #1e71b5 0%, #84a7ff 100%);
+}
+
+body {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  background: var(--bg-primary);
+  /* min-height: 4000px; */
+}
+
+/* NAVBAR */
+
+.mynavbar .active {
+  border-bottom: 2px solid var(--blue);
+  font-weight: bold;
+  color: var(--blue) !important;
+}
+
+.mynavbar {
+  box-shadow: 0 2px 2px rgb(0 0 0 / 0.1);
+}
+
+.mynavbar ul li a {
+  color: var(--text-secondary);
+}
+.mynavbar ul li a:hover {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* NAVBAR */
+/* ======================================================================================= */
+/* HERO */
+
+#hero {
+  min-height: 100vh;
+  background-image: url(img/Group\ 95.png);
+  background-repeat: no-repeat;
+}
+
+#hero h1 {
+  color: var(--text-green);
+  font-weight: bold;
+}
+
+#hero h6 {
+  color: var(--text-light-brown);
+}
+
+#hero .lihat-tema {
+  background-color: var(--blue);
+  border: none;
+}
+
+#hero .lihat-tema:hover {
+  background-color: var(--text-primary);
+}
+
+#hero .via-wa {
+  background-color: var(--blue);
+  border: none;
+}
+
+#hero .via-wa:hover {
+  background-color: var(--text-primary);
+}
+
+/* HERO */
+
+/* ================================================================================================= */
+
+/* ALASAN */
+
+#alasan {
+  padding-top: 5rem;
+  min-height: auto;
+}
+
+#alasan h1,
+#alasan h4,
+#fitur h1,
+#fitur h5,
+#tema h1 {
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+#alasan h6,
+#alasan p,
+#fitur h6,
+#fitur p,
+#tema h6 {
+  color: var(--text-secondary);
+}
+
+#alasan span {
+  color: var(--pink);
+}
+
+/* ALASAN */
+
+/* ==================================================================================================================== */
+
+/* FITUR */
+
+#fitur {
+  min-height: auto;
+  padding-top: 5rem;
+}
+
+#fitur .card {
+  min-height: auto;
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+/* FITUR */
+
+/* ================================================================================================================= */
+
+/* TEMA */
+
+#tema{
+  padding-top: 5rem;
+  min-height: auto;
+}
+
+#tema button{
+  background-color: var(--color-primary-light-brown);
+  color: var(--text-primary);
+  font-weight: bold;
+  border: none;
+}
+
+#tema .card {
+  min-height: auto;
+  margin-top: 1rem;
+  background-color: var(--text-primary);
+  border-radius: 10px;
+}
+
+
+/* TEMA */
+
+/* .footer {
+} */
+
+.footer h1 {
+  font-family: "Sacramento", cursive;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.footer span {
+  font-family: "Sacramento", cursive;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.footer .copyright {
+  font-size: 1rem;
+}
+
+/* Media Query */
+/* Extra large */
+@media (max-width: 1200px) {
+}
+
+/* laptop */
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 15rem !important;
+    padding-bottom: 0rem !important;
+  }
+
+  .hero img {
+    position: relative;
+    top: -100px !important;
+    right: -400px !important;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .mynavbar .active {
+    border-bottom: none;
+  }
+
+  #fitur .card {
+    min-height: 300px;
+    min-width: 200px;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  #hero h1,
+  #alasan h1 {
+    font-size: 20px;
+  }
+  #hero h6,
+  #alasan h6 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #alasan h4 {
+    font-size: 16px;
+  }
+  #alasan p {
+    font-size: 12px;
+  }
+
+  #alasan img {
+    width: 20px;
+  }
+
+  #alasan .row {
+    padding-top: 2rem;
+  }
+  #alasan .features {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #fitur .card {
+    min-height: auto;
+    min-width: none;
+  }
+
+  #fitur h5 {
+    font-size: 18px;
+  }
+  #fitur p {
+    font-size: 12px;
+  }
+}
