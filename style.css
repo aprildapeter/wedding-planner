@@ -59,21 +59,21 @@ body {
 }
 
 #hero .lihat-tema {
-  background-color: var(--blue);
+  background: var(--buttonColor);
   border: none;
 }
 
 #hero .lihat-tema:hover {
-  background-color: var(--text-primary);
+  background: var(--buttonColorHover);
 }
 
 #hero .via-wa {
-  background-color: var(--blue);
+  background: var(--buttonColor);
   border: none;
 }
 
 #hero .via-wa:hover {
-  background-color: var(--text-primary);
+  background: var(--buttonColorHover);
 }
 
 /* HERO */
@@ -147,6 +147,9 @@ body {
   font-weight: bold;
   border: none;
 }
+#tema button:hover {
+  background-color: var(--text-light-brown);
+}
 
 #tema .card {
   min-height: auto;
@@ -173,21 +176,27 @@ body {
 }
 
 #harga .via-shopee {
-  background-color: var(--blue);
+  background: var(--buttonColor);
+  font-weight: bold;
   border: none;
 }
 
 #harga .via-shopee:hover {
-  background-color: var(--text-primary);
+  background: var(--buttonColorHover);
 }
 
 #harga .via-wa {
-  background-color: var(--blue);
+  background: var(--buttonColor);
+  font-weight: bold;
   border: none;
 }
 
 #harga .via-wa:hover {
-  background-color: var(--text-primary);
+  background: var(--buttonColorHover);
+}
+
+#harga .card-header {
+  background: #16404d;
 }
 
 /* HARGA */
@@ -196,7 +205,7 @@ body {
 
 /* TENTANG KAMI */
 
-#tentang_kami{
+#tentang_kami {
   padding-top: 5rem;
   padding-bottom: 5rem;
   min-height: auto;
@@ -247,17 +256,43 @@ body {
     top: -100px !important;
     right: -400px !important;
   }
+
+  #harga h3 {
+    font-size: 20px;
+  }
+
+  #harga h6 {
+    font-size: 9px;
+  }
+
+  #harga button {
+    font-size: 12px;
+  }
 }
 
 /* tablet */
 @media (max-width: 768px) {
+  #hero {
+    min-height: 80vh;
+  }
   .mynavbar .active {
     border-bottom: none;
   }
 
   #fitur .card {
-    min-height: 300px;
-    min-width: 200px;
+    min-height: auto;
+  }
+
+  #harga h3 {
+    font-size: 20px;
+  }
+
+  #harga h6 {
+    font-size: 9px;
+  }
+
+  #harga button {
+    font-size: 12px;
   }
 }
 
