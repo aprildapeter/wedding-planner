@@ -237,6 +237,7 @@ body {
 
 .footer .copyright {
   font-size: 1rem;
+  text-align: right;
 }
 
 /* Media Query */
@@ -346,5 +347,13 @@ body {
   }
   #fitur p {
     font-size: 12px;
+  }
+
+  footer .container {
+    text-align: center;
+  }
+
+  footer .copyright {
+    text-align: center !important;
   }
 }
