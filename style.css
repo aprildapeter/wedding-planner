@@ -94,7 +94,8 @@ body {
 #tema h1,
 #harga h1,
 #tentang_kami h1,
-#tentang_kami h5 {
+#tentang_kami h5,
+#fitur h4 {
   font-weight: bold;
   color: var(--text-primary);
 }
@@ -141,14 +142,33 @@ body {
   min-height: auto;
 }
 
-#tema button {
+#tema nav button{
+  color: var(--text-primary);
+}
+
+#tema nav button:hover{
+  background: var(--text-secondary);
+  color: var(--bg-primary);
+}
+
+#tema .card button {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-weight: bold;
   border: none;
 }
-#tema button:hover {
+#tema .card button:hover {
   background-color: var(--text-light-brown);
+}
+
+#tema .bg-light button {
+  color: var(--bg-primary);
+  background: var(--text-primary);
+  font-weight: bold;
+  border: none;
+}
+#tema .bg-light button:hover {
+  background-color: var(--blue);
 }
 
 #tema .card {
@@ -306,6 +326,10 @@ body {
   #harga h1,
   #tentang_kami h1 {
     font-size: 24px;
+  }
+
+  #fitur h4 {
+    font-size: 20px;
   }
   #hero h6,
   #alasan h6,
