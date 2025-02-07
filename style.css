@@ -293,9 +293,6 @@ body {
 
 /* tablet */
 @media (max-width: 768px) {
-  #hero {
-    min-height: 80vh;
-  }
   .mynavbar .active {
     border-bottom: none;
   }
@@ -303,17 +300,22 @@ body {
   #fitur .card {
     min-height: auto;
   }
+  
+  #harga .row{
+    display: flex;
+    justify-content: center;
+  }
 
   #harga h3 {
     font-size: 20px;
   }
 
   #harga h6 {
-    font-size: 9px;
+    font-size: 16px;
   }
 
   #harga a {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
