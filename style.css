@@ -151,23 +151,23 @@ body {
   color: var(--bg-primary);
 }
 
-#tema .card button {
+#tema .card a {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-weight: bold;
   border: none;
 }
-#tema .card button:hover {
+#tema .card a:hover {
   background-color: var(--text-light-brown);
 }
 
-#tema .bg-light button {
+#tema .bg-light a {
   color: var(--bg-primary);
   background: var(--text-primary);
   font-weight: bold;
   border: none;
 }
-#tema .bg-light button:hover {
+#tema .bg-light a:hover {
   background-color: var(--blue);
 }
 
