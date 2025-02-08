@@ -314,28 +314,41 @@ body {
   background-color: var(--blue);
 }
 
-/* .header {
-  margin-bottom: 15rem !important;
-} */
+.header {
+  margin-bottom: 10rem !important;
+}
 
 .couple {
-  z-index: 1 !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  max-width: 150px;
+}
+
+.flower {
+  position: absolute;
+  bottom: 0;
+  max-width: 80px;
 }
 
 .flower-1 {
-  z-index: 0;
+  left: 0;
 }
 .flower-2 {
-  z-index: 0;
+  left: 20%;
+  transform: translateX(-20%);
 }
 .flower-3 {
-  z-index: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .flower-4 {
-  z-index: 0;
+  left: 80%;
+  transform: translateX(-80%);
 }
 .flower-5 {
-  z-index: 0;
+  right: 0;
 }
 
 /* OPEN UNDANGAN */
@@ -408,7 +421,12 @@ body {
   }
 
   /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
+  .couple {
+    max-width: 200px;
+  }
+  .flower {
+    max-width: 100px;
+  }
   /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
@@ -480,5 +498,16 @@ body {
   /* .header {
     margin-bottom: 0rem !important;
   } */
+
   /* ++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++ */
+}
+
+@media (max-width: 480px) {
+  /* HP kecil */
+  .couple {
+    max-width: 150px;
+  }
+  .flower {
+    max-width: 80px;
+  }
 }
