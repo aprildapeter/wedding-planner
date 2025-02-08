@@ -142,11 +142,11 @@ body {
   min-height: auto;
 }
 
-#tema nav button{
+#tema nav button {
   color: var(--text-primary);
 }
 
-#tema nav button:hover{
+#tema nav button:hover {
   background: var(--text-secondary);
   color: var(--bg-primary);
 }
@@ -260,9 +260,62 @@ body {
   text-align: right;
 }
 
+/* FOOTER */
+
+/* ============================================================================================================= */
+
+/* ++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* OPEN UNDANGAN */
+
+#open-undangan {
+  min-height: 100vh;
+  background-image: url(img/bg-template.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#open-undangan .container {
+  width: 100%; /* Agar background merah tetap penuh */
+  max-width: 430px;
+  min-height: 100vh;
+}
+
+#open-undangan h1 {
+  color: var(--text-primary);
+}
+
+#open-undangan h5 {
+  color: var(--text-primary);
+  font-size: 16px;
+}
+#open-undangan h6 {
+  color: var(--text-primary);
+  font-size: 13px;
+}
+#open-undangan p {
+  color: var(--text-secondary);
+  font-size: 9px;
+}
+
+#open-undangan button {
+  width: 193px;
+}
+
+.header {
+  margin-bottom: 15rem !important;
+}
+
+/* OPEN UNDANGAN */
+
+/* ++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 /* Media Query */
 /* Extra large */
 @media (max-width: 1200px) {
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
 /* laptop */
@@ -289,6 +342,10 @@ body {
   #harga a {
     font-size: 12px;
   }
+
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
 /* tablet */
@@ -300,8 +357,8 @@ body {
   #fitur .card {
     min-height: auto;
   }
-  
-  #harga .row{
+
+  #harga .row {
     display: flex;
     justify-content: center;
   }
@@ -317,6 +374,10 @@ body {
   #harga a {
     font-size: 16px;
   }
+
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
 /* mobile phone */
@@ -382,4 +443,10 @@ body {
   footer .copyright {
     text-align: center !important;
   }
+
+  /* ++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++ */
+  .header {
+    margin-bottom: 0rem !important;
+  }
+  /* ++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++ */
 }
