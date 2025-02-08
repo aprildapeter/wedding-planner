@@ -16,6 +16,7 @@ body {
   font-size: 16px;
   font-family: "Work Sans", sans-serif;
   background: var(--bg-primary);
+  overflow: hidden;
   /* min-height: 4000px; */
 }
 
@@ -324,12 +325,14 @@ body {
   transform: translateX(-50%);
   bottom: 0;
   max-width: 150px;
+  object-fit: contain;
 }
 
 .flower {
   position: absolute;
   bottom: 0;
   max-width: 80px;
+  object-fit: contain;
 }
 
 .flower-1 {
