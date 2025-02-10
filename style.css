@@ -289,16 +289,20 @@ body {
 
 #open-undangan {
   min-height: 100vh;
-  background-image: url(img/bg-template.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f4fafc;
   z-index: -1;
 }
 
 #open-undangan .container {
   width: 100%; /* Agar background merah tetap penuh */
-  max-width: 430px;
+  max-width: 644px;
   min-height: 100vh;
+}
+
+#open-undangan .container .text-center {
+  background-image: url(img/bg-template.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #open-undangan h1 {
@@ -334,7 +338,8 @@ body {
 }
 
 .header {
-  margin-bottom: 10rem !important;
+  margin-bottom: 10rem;
+  z-index: 1;
 }
 
 .couple {
@@ -342,14 +347,14 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  max-width: 150px;
+  max-width: 140px;
   object-fit: contain;
 }
 
 .flower {
   position: absolute;
   bottom: 0;
-  max-width: 80px;
+  max-width: 70px;
   object-fit: contain;
 }
 
@@ -446,7 +451,7 @@ body {
     max-width: 200px;
   }
   .flower {
-    max-width: 100px;
+    max-width: 200px;
   }
   /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
@@ -519,12 +524,36 @@ body {
   /* .header {
     margin-bottom: 0rem !important;
   } */
-
   /* ++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
 @media (max-width: 480px) {
   /* HP kecil */
+
+  #open-undangan .header {
+    margin-bottom: 10rem;
+  }
+  .couple {
+    max-width: 200px;
+  }
+  .flower {
+    max-width: 100px;
+  }
+
+  #hero .via-wa {
+    font-size: 12px;
+  }
+  #hero .lihat-tema {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  /* HP kecil */
+
+  #open-undangan .header {
+    margin-bottom: 10rem;
+  }
   .couple {
     max-width: 150px;
   }
@@ -532,10 +561,10 @@ body {
     max-width: 80px;
   }
 
-  #hero .via-wa{
+  #hero .via-wa {
     font-size: 12px;
   }
-  #hero .lihat-tema{
+  #hero .lihat-tema {
     font-size: 12px;
   }
 }
