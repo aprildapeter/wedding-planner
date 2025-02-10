@@ -266,6 +266,13 @@ body {
 
 /* ++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+#template {
+  font-size: 16px;
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+  background: var(--bg-primary);
+}
+
 /* OPEN UNDANGAN */
 .undangan-title {
   display: inline-block;
@@ -376,6 +383,77 @@ body {
 
 /* OPEN UNDANGAN */
 
+/* MAIN UNDANGAN */
+
+#main-undangan {
+  min-height: 100vh;
+  background-color: #f4fafc;
+}
+
+#main-undangan .container {
+  width: 100%; /* Agar background merah tetap penuh */
+  max-width: 480px;
+  min-height: 100vh;
+  background-image: url(img/bg-template.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main-undangan .container h1 {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#main-undangan .container .couple-main {
+  width: 200px;
+}
+
+#main-undangan .container .couple-name {
+  font-family: "Allura", serif;
+  font-size: 50px;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+  position: relative;
+  padding: 20px 40px; /* Ruang untuk teks */
+}
+
+#main-undangan .container .couple-name::before,
+#main-undangan .container .couple-name::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 14px; /* Ketebalan border */
+  background-color: var(--text-primary);
+}
+#main-undangan .container .couple-name::before {
+  top: 0;
+  clip-path: polygon(0% 100%, 10% 0%, 90% 0%, 100% 100%);
+}
+
+#main-undangan .container .couple-name::after {
+  bottom: 0;
+  clip-path: polygon(0% 0%, 10% 100%, 90% 100%, 100% 0%);
+}
+
+#main-undangan .container .date-main {
+  font-size: 40px;
+  word-spacing: 20px;
+  border-bottom: 3px solid var(--text-primary);
+  border-top: 3px solid var(--text-primary);
+}
+
+#main-undangan .simply-countdown > .simply-section {
+  padding: 35px;
+  font-size: 12px;
+  color: var(--bg-primary);
+}
+/* MAIN UNDANGAN */
+
 /* ++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* Media Query */
@@ -383,6 +461,31 @@ body {
 @media (max-width: 1200px) {
   /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+  #main-undangan .container h1 {
+    font-size: 30px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 60px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 300px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 300px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 40px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 46px;
+    font-size: 20px;
+  }
   /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
@@ -409,6 +512,32 @@ body {
 
   #harga a {
     font-size: 12px;
+  }
+
+  #main-undangan .container h1 {
+    font-size: 30px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 60px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 300px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 300px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 40px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 46px;
+    font-size: 20px;
   }
 
   /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -449,6 +578,32 @@ body {
   }
   #open-undangan .flower {
     max-width: 200px;
+  }
+
+  #main-undangan .container h1 {
+    font-size: 30px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 60px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 300px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 300px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 40px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 46px;
+    font-size: 20px;
   }
   /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
@@ -521,6 +676,7 @@ body {
   /* .header {
     margin-bottom: 0rem !important;
   } */
+
   /* ++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
@@ -543,6 +699,36 @@ body {
   #hero .lihat-tema {
     font-size: 12px;
   }
+
+  /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  #main-undangan .container h1 {
+    font-size: 25px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 50px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 230px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 230px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 35px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 35px;
+    font-size: 14px;
+  }
+
+  /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
 @media (max-width: 380px) {
@@ -564,4 +750,38 @@ body {
   #hero .lihat-tema {
     font-size: 12px;
   }
+
+  /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  #main-undangan .container h1 {
+    font-size: 20px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 45px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 200px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 200px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 30px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 33px;
+    font-size: 12px;
+  }
+
+  #main-undangan .container .col-12{
+    padding-top: 0;
+  }
+
+  /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
 }

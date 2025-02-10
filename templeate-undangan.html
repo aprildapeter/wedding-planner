@@ -24,6 +24,11 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="shortcut icon" href="img/Group 93.png" type="image/x-icon" />
 
     <!-- Bootstrap icon -->
@@ -43,9 +48,13 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <!-- simplyCountdown -->
+    <link rel="stylesheet" href="plugin/countdown/simplyCountdown.theme.default.css" />
+    <script src="plugin/countdown/simplyCountdown.min.js"></script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="template">
     <section id="open-undangan" class="">
       <div
         class="container d-flex justify-content-center position-relative p-0"
@@ -75,7 +84,26 @@
       </div>
     </section>
 
-    <section id="main-undangan"></section>
+    <section id="main-undangan">
+      <div
+        class="container d-flex justify-content-center align-items-center text-center position-relative"
+      >
+        <div class="row">
+          <div class="col-12">
+            <h1>
+              You are Invited to <br />
+              THE WEDDING OF
+            </h1>
+            <div class="pt-3">
+              <img src="img/couple-main.png" class="couple-main"/>
+            </div>
+            <h1 class="couple-name">Rama & Shinta</h1>
+            <h1 class="mt-5 date-main p-0">27 Oktober 2025</h1>
+            <div class="mt-5 simply-countdown js"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -90,6 +118,20 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      simplyCountdown('.simply-countdown', {
+        year: 2025, // required
+        month: 3, // required
+        day: 27, // required
+        hours: 8, // Default is 0 [0-23] integer
+        words: { //words displayed into the countdown
+          days: { singular: 'hari', plural: 'hari' },
+          hours: { singular: 'jam', plural: 'jam' },
+          minutes: { singular: 'menit', plural: 'menit' },
+          seconds: { singular: 'detik', plural: 'detik' }
+        },
+      });
     </script>
   </body>
 </html>
