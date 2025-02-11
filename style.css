@@ -295,9 +295,24 @@ body {
 }
 
 #open-undangan {
-  min-height: 100vh;
   background-color: #ddf0fe;
-  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 10.5s ease, clip-path 1s ease;
+  clip-path: inset(0 0 0 0);
+}
+
+#open-undangan.d {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0); /* Elemen naik ke atas */
 }
 
 #open-undangan .container {
@@ -385,6 +400,14 @@ body {
 }
 
 /* OPEN UNDANGAN */
+
+#all {
+  position: absolute; /* Agar elemen berada di atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0; /* Memastikan #main-undangan tetap di bawah #open-undangan */
+}
 
 /* MAIN UNDANGAN */
 
@@ -532,10 +555,60 @@ body {
 }
 
 #pasangan-undangan .container .profil-cowo {
-padding-top: 3rem;
+  padding-top: 3rem;
 }
 
 /* PASANGAN UNDANGA */
+
+/* INFORMASI UNDANGAN */
+
+#pasangan-undangan .informasi-undangan {
+  padding-top: 7rem;
+}
+
+#pasangan-undangan .container .informasi-undangan .card {
+  width: 100%;
+}
+
+#pasangan-undangan .container .informasi-undangan h1 {
+  font-size: 50px;
+  font-family: "Allura", serif;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+#pasangan-undangan
+  .container
+  .informasi-undangan
+  .card
+  .flower-informasi-undangan {
+  position: absolute;
+  top: -50px;
+  width: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#pasangan-undangan .container .informasi-undangan .card .date-main {
+  color: var(--text-primary);
+  font-size: 40px;
+  word-spacing: 20px;
+  border-bottom: 3px solid var(--text-primary);
+  border-top: 3px solid var(--text-primary);
+}
+
+#pasangan-undangan .container .informasi-undangan .card .map iframe {
+  margin-top: 2rem;
+  border: 1px solid var(--text-primary);
+}
+#pasangan-undangan .container .informasi-undangan .card .lihat-lokasi {
+  background: var(--text-primary);
+  border: none;
+}
+#pasangan-undangan .container .informasi-undangan .card .lihat-lokasi:hover {
+  background: var(--blue);
+}
+
+/* INFORMASI UNDANGAN */
 
 /* ++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -545,7 +618,7 @@ padding-top: 3rem;
   /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
   #main-undangan .container h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   #main-undangan .container .couple-name {
@@ -664,7 +737,7 @@ padding-top: 3rem;
   }
 
   #main-undangan .container h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   #main-undangan .container .couple-name {
@@ -786,7 +859,7 @@ padding-top: 3rem;
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
 
   #main-undangan .container h1 {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   #main-undangan .container .couple-name {
@@ -837,7 +910,7 @@ padding-top: 3rem;
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
 
   #main-undangan .container h1 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   #main-undangan .container .couple-name {
@@ -865,6 +938,17 @@ padding-top: 3rem;
   #main-undangan .container .col-12 {
     padding-top: 0;
   }
+
+#pasangan-undangan .container .informasi-undangan h3 {
+  font-size: 12px;
+}
+#pasangan-undangan .container .informasi-undangan h6 {
+  font-size: 12px;
+}
+
+#pasangan-undangan .container .informasi-undangan .card .date-main {
+  font-size: 30px;
+}
 
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
 }
