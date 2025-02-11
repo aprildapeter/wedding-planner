@@ -568,6 +568,10 @@ body {
 
 #pasangan-undangan .container .informasi-undangan .card {
   width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 4px 3px 5px 0px rgba(153, 132, 132, 0.75);
+  -webkit-box-shadow: 4px 3px 5px 0px rgba(153, 132, 132, 0.75);
+  -moz-box-shadow: 4px 3px 5px 0px rgba(153, 132, 132, 0.75);
 }
 
 #pasangan-undangan .container .informasi-undangan h1 {
@@ -884,6 +888,17 @@ body {
     font-size: 14px;
   }
 
+  #pasangan-undangan .container .informasi-undangan h3 {
+    font-size: 12px;
+  }
+  #pasangan-undangan .container .informasi-undangan h6 {
+    font-size: 12px;
+  }
+
+  #pasangan-undangan .container .informasi-undangan .card .date-main {
+    font-size: 30px;
+  }
+
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 
@@ -939,16 +954,16 @@ body {
     padding-top: 0;
   }
 
-#pasangan-undangan .container .informasi-undangan h3 {
-  font-size: 12px;
-}
-#pasangan-undangan .container .informasi-undangan h6 {
-  font-size: 12px;
-}
+  #pasangan-undangan .container .informasi-undangan h3 {
+    font-size: 12px;
+  }
+  #pasangan-undangan .container .informasi-undangan h6 {
+    font-size: 12px;
+  }
 
-#pasangan-undangan .container .informasi-undangan .card .date-main {
-  font-size: 30px;
-}
+  #pasangan-undangan .container .informasi-undangan .card .date-main {
+    font-size: 30px;
+  }
 
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
 }
