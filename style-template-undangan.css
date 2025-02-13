@@ -532,6 +532,7 @@
 #story .timeline .timeline-panel h3 {
   font-size: 10px;
   font-weight: bold;
+  color: var(--text-primary);
 }
 #story .timeline .timeline-body p {
   font-size: 9px;
