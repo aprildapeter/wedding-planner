@@ -550,19 +550,60 @@
 /* GALERI */
 
 #galeri {
-  min-height: auto;
   background-color: #ddf0fe;
+  text-align: center;
 }
 
 #galeri .container {
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
-  width: 100%; /* Agar background merah tetap penuh */
+  width: 100%;
   max-width: 480px;
   min-height: 100vh;
   background-image: url(img/bg-template.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#galeri .header h1 {
+  font-size: 50px;
+  font-family: "Allura", serif;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default 2 kolom */
+  gap: 5px;
+  padding: 0;
+}
+
+.gallery-item {
+  width: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Gambar landscape mengambil 2 kolom penuh (1 baris sendiri) */
+.gallery-item.landscape {
+  grid-column: span 2;
+}
+
+.gallery-item.portrait {
+  grid-column: span 1;
+}
+
+
+#galeri .galeri-footer {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* GALERI */
