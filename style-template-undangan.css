@@ -1,0 +1,865 @@
+:root {
+  --bg-primary: #f8f9fc;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --pink: #f14e95;
+  --color-primary-light-brown: #edc;
+  --text-primary: #2e4374;
+  --text-secondary: #757b89;
+  --text-green: #bad8b6;
+  --text-light-brown: #fffaec;
+  --blue: #1e55b3;
+  --buttonColor: linear-gradient(90deg, #175e9a 0%, #7397f3 100%);
+  --buttonColorHover: linear-gradient(90deg, #1e71b5 0%, #84a7ff 100%);
+}
+
+/* body {
+    font-size: 16px;
+    font-family: "Work Sans", sans-serif;
+    background: var(--bg-primary);
+  } */
+/* ============================================================================================================= */
+
+/* ++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#template {
+  font-size: 16px;
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+  background: var(--bg-primary);
+}
+
+/* OPEN UNDANGAN */
+.undangan-title {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  padding-top: 20px; /* Ruang untuk trapesium */
+}
+
+.undangan-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100px;
+  height: 0;
+  border-bottom: 8px solid black; /* Tebal garis */
+  border-left: 15px solid transparent; /* Miring kiri */
+  border-right: 15px solid transparent; /* Miring kanan */
+  transform: translateX(-50%);
+}
+
+#open-undangan {
+  background-color: #ddf0fe;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 10.5s ease, clip-path 1s ease;
+  clip-path: inset(0 0 0 0);
+}
+
+#open-undangan.d {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0); /* Elemen naik ke atas */
+}
+
+#open-undangan .container {
+  width: 100%; /* Agar background merah tetap penuh */
+  max-width: 480px;
+  min-height: 100vh;
+  background-image: url(img/bg-template.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#open-undangan h1 {
+  color: var(--text-primary);
+  font-family: "Allura", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+#open-undangan h5 {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: bold;
+}
+#open-undangan h6 {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: bold;
+}
+#open-undangan p {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#open-undangan button {
+  width: 193px;
+  color: var(--bg-primary);
+  background: var(--text-primary);
+  font-weight: bold;
+  border: none;
+}
+#open-undangan button:hover {
+  background-color: var(--blue);
+}
+
+#open-undangan .header {
+  margin-bottom: 10rem;
+  z-index: 1;
+}
+
+#open-undangan .couple {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  max-width: 140px;
+  object-fit: contain;
+}
+
+#open-undangan .flower {
+  position: absolute;
+  bottom: 0;
+  max-width: 70px;
+  object-fit: contain;
+}
+
+#open-undangan .flower-1 {
+  left: 0;
+}
+.flower-2 {
+  left: 20%;
+  transform: translateX(-20%);
+}
+#open-undangan .flower-3 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+#open-undangan .flower-4 {
+  left: 80%;
+  transform: translateX(-80%);
+}
+#open-undangan .flower-5 {
+  right: 0;
+}
+
+/* OPEN UNDANGAN */
+
+#all {
+  position: absolute; /* Agar elemen berada di atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0; /* Memastikan #main-undangan tetap di bawah #open-undangan */
+}
+
+/* MAIN UNDANGAN */
+
+#main-undangan {
+  min-height: 100vh;
+  background-color: #ddf0fe;
+}
+
+#main-undangan .container {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  width: 100%; /* Agar background merah tetap penuh */
+  max-width: 480px;
+  min-height: 100vh;
+  background-image: url(img/bg-template.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main-undangan .container h1 {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#main-undangan .container .couple-main {
+  width: 200px;
+}
+
+#main-undangan .container .couple-name {
+  font-family: "Allura", serif;
+  font-size: 50px;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+  position: relative;
+  padding: 20px 40px; /* Ruang untuk teks */
+}
+
+#main-undangan .container .couple-name::before,
+#main-undangan .container .couple-name::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 14px; /* Ketebalan border */
+  background-color: var(--text-primary);
+}
+#main-undangan .container .couple-name::before {
+  top: 0;
+  clip-path: polygon(0% 100%, 10% 0%, 90% 0%, 100% 100%);
+}
+
+#main-undangan .container .couple-name::after {
+  bottom: 0;
+  clip-path: polygon(0% 0%, 10% 100%, 90% 100%, 100% 0%);
+}
+
+#main-undangan .container .date-main {
+  font-size: 40px;
+  word-spacing: 20px;
+  border-bottom: 3px solid var(--text-primary);
+  border-top: 3px solid var(--text-primary);
+}
+
+#main-undangan .simply-countdown > .simply-section {
+  padding: 35px;
+  font-size: 12px;
+  color: var(--bg-primary);
+}
+/* MAIN UNDANGAN */
+
+/* KUTIPAN */
+
+#kutipan {
+  min-height: auto;
+  background-color: #ddf0fe;
+}
+
+#kutipan .container {
+  padding: 5rem 1rem;
+  width: 100%; /* Agar background merah tetap penuh */
+  max-width: 480px;
+  background-color: #fafafa;
+}
+
+#kutipan .container h3 {
+  padding: 0;
+  font-size: 10px;
+  font-style: italic;
+}
+
+#kutipan .container .kutipan-flower {
+  position: absolute;
+  top: -60px;
+  object-fit: contain;
+}
+
+#kutipan .container .kutipan-flower-2 {
+  position: absolute;
+  bottom: -60px;
+  object-fit: contain;
+  transform: scaleX(-1);
+  z-index: 2;
+}
+
+/* KUTIPAN */
+
+/* PASANGAN UNDANGA */
+
+#pasangan-undangan {
+  min-height: auto;
+  background-color: #ddf0fe;
+}
+
+#pasangan-undangan .container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 100%; /* Agar background merah tetap penuh */
+  max-width: 480px;
+  min-height: 100vh;
+  background-image: url(img/bg-template.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pasangan-undangan .container h3 {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+#pasangan-undangan .container h1 {
+  font-size: 50px;
+  font-family: "Allura", serif;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+#pasangan-undangan .container h6 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+#pasangan-undangan .container .profil-cowo {
+  padding-top: 3rem;
+}
+
+/* PASANGAN UNDANGA */
+
+/* INFORMASI UNDANGAN */
+
+#pasangan-undangan .informasi-undangan {
+  padding-top: 7rem;
+}
+
+#pasangan-undangan .container .informasi-undangan .card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 4px 3px 5px 0px rgba(153, 132, 132, 0.75);
+  -webkit-box-shadow: 4px 3px 5px 0px rgba(153, 132, 132, 0.75);
+  -moz-box-shadow: 4px 3px 5px 0px rgba(153, 132, 132, 0.75);
+}
+
+#pasangan-undangan .container .informasi-undangan h1 {
+  font-size: 50px;
+  font-family: "Allura", serif;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+#pasangan-undangan
+  .container
+  .informasi-undangan
+  .card
+  .flower-informasi-undangan {
+  position: absolute;
+  top: -50px;
+  width: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#pasangan-undangan .container .informasi-undangan .card .date-main {
+  color: var(--text-primary);
+  font-size: 40px;
+  word-spacing: 20px;
+  border-bottom: 3px solid var(--text-primary);
+  border-top: 3px solid var(--text-primary);
+}
+
+#pasangan-undangan .container .informasi-undangan .card .map iframe {
+  margin-top: 2rem;
+  border: 1px solid var(--text-primary);
+}
+#pasangan-undangan .container .informasi-undangan .card .lihat-lokasi {
+  background: var(--text-primary);
+  border: none;
+}
+#pasangan-undangan .container .informasi-undangan .card .lihat-lokasi:hover {
+  background: var(--blue);
+}
+
+/* INFORMASI UNDANGAN */
+
+/* STORY */
+
+#story {
+  min-height: auto;
+  background-color: #ddf0fe;
+}
+
+#story .container {
+  border: 5px solid white;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  width: 100%; /* Agar background merah tetap penuh */
+  max-width: 480px;
+  min-height: 100vh;
+  background-image: url(img/bg-template.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#story .flower-story {
+  position: absolute;
+  top: -85px;
+  left: -5px;
+}
+#story .flower-story-2 {
+  position: absolute;
+  top: -85px;
+  right: -5px;
+  transform: scaleX(-1);
+}
+#story .flower-story-3 {
+  position: absolute;
+  bottom: -85px;
+  left: -5px;
+  transform: scaleY(-1);
+}
+#story .flower-story-4 {
+  position: absolute;
+  bottom: -85px;
+  right: -5px;
+  transform: rotate(180deg);
+}
+
+#story .container h1 {
+  font-size: 50px;
+  font-family: "Allura", serif;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+#story .timeline {
+  list-style: none;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  position: relative;
+}
+
+#story .timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 3px;
+  /* background-color: var(--text-primary); */
+  border-left: 3px dashed var(--text-primary);
+  left: 50%;
+}
+
+#story .timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+#story .timeline li::before,
+#story .timeline li::after {
+  content: "";
+  display: table;
+}
+
+#story .timeline li::after {
+  clear: both;
+}
+
+#story .timeline li .timeline-image {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 40px;
+}
+
+#story .timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  position: relative;
+  text-align: right;
+}
+#story .timeline li .timeline-panel .timeline-heading {
+  width: 100%;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  border: 1px solid var(--text-primary);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#story .timeline li .timeline-panel .timeline-heading::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  top: 20px;
+  right: -20px;
+}
+
+#story .timeline li .timeline-panel .timeline-heading::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid var(--text-primary);
+  border-right: 0 solid var(--text-primary);
+  border-bottom: 14px solid transparent;
+  top: 20px;
+  right: -18px;
+}
+
+#story .timeline li.timeline-inverted .timeline-panel {
+  float: right;
+  text-align: left;
+}
+
+#story
+  .timeline
+  li.timeline-inverted
+  .timeline-panel
+  .timeline-heading::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -20px;
+  right: auto;
+}
+
+#story .timeline li.timeline-inverted .timeline-panel .timeline-heading::after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -18px;
+  right: auto;
+}
+
+#story .timeline .timeline-panel h3 {
+  font-size: 10px;
+  font-weight: bold;
+}
+#story .timeline .timeline-body p {
+  font-size: 9px;
+}
+#story .timeline li.timeline-inverted .timeline-heading h3 {
+  font-weight: bold;
+  font-size: 10px;
+}
+#story .timeline li.timeline-inverted .timeline-body p {
+  font-size: 9px;
+}
+
+/* STORY */
+
+/* GALERI */
+
+#galeri {
+  min-height: auto;
+  background-color: #ddf0fe;
+}
+
+#galeri .container {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  width: 100%; /* Agar background merah tetap penuh */
+  max-width: 480px;
+  min-height: 100vh;
+  background-image: url(img/bg-template.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* GALERI */
+
+/* ++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Media Query */
+/* Extra large */
+@media (max-width: 1200px) {
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  #main-undangan .container h1 {
+    font-size: 25px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 60px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 300px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 300px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 40px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 46px;
+    font-size: 20px;
+  }
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+}
+
+/* laptop */
+@media (max-width: 992px) {
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  #main-undangan .container h1 {
+    font-size: 30px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 60px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 300px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 300px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 40px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 46px;
+    font-size: 20px;
+  }
+
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+  #open-undangan .couple {
+    max-width: 200px;
+  }
+  #open-undangan .flower {
+    max-width: 200px;
+  }
+
+  #main-undangan .container h1 {
+    font-size: 25px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 60px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 300px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 300px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 40px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 46px;
+    font-size: 20px;
+  }
+  /* +++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  /* ++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++ */
+  /* .header {
+      margin-bottom: 0rem !important;
+    } */
+
+  /* ++++++++++++++++++++++ TEMPLATE UNDANGAN ++++++++++++++++++++++++++++++++++++++++++++++ */
+}
+
+@media (max-width: 480px) {
+  /* HP kecil */
+
+  /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  #main-undangan .container h1 {
+    font-size: 20px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 50px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 230px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 230px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 35px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 35px;
+    font-size: 14px;
+  }
+
+  #pasangan-undangan .container .informasi-undangan h3 {
+    font-size: 13px;
+  }
+  #pasangan-undangan .container .informasi-undangan h6 {
+    font-size: 13px;
+  }
+
+  #pasangan-undangan .container .informasi-undangan .card .date-main {
+    font-size: 30px;
+  }
+
+  #story .timeline li .timeline-image {
+    top: 31px;
+  }
+
+  #story .timeline li .timeline-panel .timeline-heading::before {
+    border-top: 9px solid transparent;
+    border-left: 9px solid #ccc;
+    border-bottom: 9px solid transparent;
+    right: -16px;
+  }
+
+  #story .timeline li .timeline-panel .timeline-heading::after {
+    border-top: 8px solid transparent;
+    border-left: 8px solid var(--text-primary);
+    border-bottom: 8px solid transparent;
+    right: -14px;
+  }
+
+  #story
+  .timeline
+  li.timeline-inverted
+  .timeline-panel
+  .timeline-heading::before {
+  border-right-width: 9px;
+  left: -16px;
+}
+
+#story .timeline li.timeline-inverted .timeline-panel .timeline-heading::after {
+  border-right-width: 8px;
+  left: -14px;
+}
+
+  #story .timeline .timeline-panel h3 {
+    font-size: 8px;
+  }
+  #story .timeline .timeline-body p {
+    font-size: 7px;
+  }
+  #story .timeline li.timeline-inverted .timeline-heading h3 {
+    font-size: 8px;
+  }
+  #story .timeline li.timeline-inverted .timeline-body p {
+    font-size: 7px;
+  }
+
+  /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
+}
+
+@media (max-width: 380px) {
+  /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  #main-undangan .container h1 {
+    font-size: 16px;
+  }
+
+  #main-undangan .container .couple-name {
+    font-size: 45px;
+  }
+
+  #main-undangan .container .couple-main {
+    width: 200px;
+  }
+
+  #main-undangan .container .couple-name::before,
+  #main-undangan .container .couple-name::after {
+    width: 200px;
+  }
+
+  #main-undangan .container .date-main {
+    font-size: 30px;
+  }
+
+  #main-undangan .simply-countdown > .simply-section {
+    padding: 33px;
+    font-size: 12px;
+  }
+
+  #main-undangan .container .col-12 {
+    padding-top: 0;
+  }
+
+  #pasangan-undangan .container .informasi-undangan h3 {
+    font-size: 12px;
+  }
+  #pasangan-undangan .container .informasi-undangan h6 {
+    font-size: 12px;
+  }
+
+  #pasangan-undangan .container .informasi-undangan .card .date-main {
+    font-size: 30px;
+  }
+
+  #story .timeline li .timeline-image {
+    top: 31px;
+  }
+
+  #story .timeline li .timeline-panel .timeline-heading::before {
+    border-top: 9px solid transparent;
+    border-left: 9px solid #ccc;
+    border-bottom: 9px solid transparent;
+    right: -16px;
+  }
+
+  #story .timeline li .timeline-panel .timeline-heading::after {
+    border-top: 8px solid transparent;
+    border-left: 8px solid var(--text-primary);
+    border-bottom: 8px solid transparent;
+    right: -14px;
+  }
+
+  #story
+  .timeline
+  li.timeline-inverted
+  .timeline-panel
+  .timeline-heading::before {
+  border-right-width: 9px;
+  left: -16px;
+}
+
+#story .timeline li.timeline-inverted .timeline-panel .timeline-heading::after {
+  border-right-width: 8px;
+  left: -14px;
+}
+
+  #story .timeline .timeline-panel h3 {
+    font-size: 8px;
+  }
+  #story .timeline .timeline-body p {
+    font-size: 7px;
+  }
+  #story .timeline li.timeline-inverted .timeline-heading h3 {
+    font-size: 8px;
+  }
+  #story .timeline li.timeline-inverted .timeline-body p {
+    font-size: 7px;
+  }
+
+  /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
+}
