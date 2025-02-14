@@ -151,7 +151,7 @@ body {
   color: var(--bg-primary);
 }
 
-#tema .card a {
+/* #tema .card a {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-weight: bold;
@@ -159,6 +159,16 @@ body {
 }
 #tema .card a:hover {
   background-color: var(--text-light-brown);
+} */
+
+#tema .card a {
+  color: var(--bg-primary);
+  background: var(--text-primary);
+  font-weight: bold;
+  border: none;
+}
+#tema .card a:hover {
+  background-color: var(--blue);
 }
 
 #tema .bg-light a {
@@ -174,7 +184,7 @@ body {
 #tema .card {
   min-height: auto;
   margin-top: 1rem;
-  background-color: var(--text-primary);
+  background-color: var(--bg-primary);
   border-radius: 10px;
 }
 

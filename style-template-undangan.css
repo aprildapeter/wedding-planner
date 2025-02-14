@@ -927,16 +927,16 @@
   }
 
   #story .timeline .timeline-panel h3 {
-    font-size: 8px;
+    font-size: 10px;
   }
   #story .timeline .timeline-body p {
-    font-size: 7px;
+    font-size: 9px;
   }
   #story .timeline li.timeline-inverted .timeline-heading h3 {
-    font-size: 8px;
+    font-size: 10px;
   }
   #story .timeline li.timeline-inverted .timeline-body p {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -1023,16 +1023,16 @@
   }
 
   #story .timeline .timeline-panel h3 {
-    font-size: 8px;
+    font-size: 9px;
   }
   #story .timeline .timeline-body p {
-    font-size: 7px;
-  }
-  #story .timeline li.timeline-inverted .timeline-heading h3 {
     font-size: 8px;
   }
+  #story .timeline li.timeline-inverted .timeline-heading h3 {
+    font-size: 9px;
+  }
   #story .timeline li.timeline-inverted .timeline-body p {
-    font-size: 7px;
+    font-size: 8px;
   }
 
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
