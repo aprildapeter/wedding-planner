@@ -22,10 +22,10 @@ function playAudio() {
 audioIconWrapper.onclick = function () {
   if (isPlaying) {
     song.pause();
-    audioIcon.src = 'img/mute.png';
+    audioIcon.src = 'img/template-animasi/mute.png';
   } else {
     song.play();
-    audioIcon.src = 'img/noisy.png';
+    audioIcon.src = 'img/template-animasi/noisy.png';
   }
 
   isPlaying = !isPlaying;
