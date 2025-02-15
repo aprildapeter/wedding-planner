@@ -112,7 +112,7 @@
   width: 100%; /* Agar background merah tetap penuh */
   max-width: 480px;
   min-height: 100vh;
-  background-image: url(img/bg-template.png);
+  background-image: url(img/template-animasi/bg-template.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -215,7 +215,7 @@
   width: 100%; /* Agar background merah tetap penuh */
   max-width: 480px;
   min-height: 100vh;
-  background-image: url(img/bg-template.png);
+  background-image: url(img/template-animasi/bg-template.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -324,7 +324,7 @@
   width: 100%; /* Agar background merah tetap penuh */
   max-width: 480px;
   min-height: 100vh;
-  background-image: url(img/bg-template.png);
+  background-image: url(img/template-animasi/bg-template.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -421,7 +421,7 @@
   width: 100%; /* Agar background merah tetap penuh */
   max-width: 480px;
   min-height: 100vh;
-  background-image: url(img/bg-template.png);
+  background-image: url(img/template-animasi/bg-template.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -602,7 +602,7 @@
   width: 100%;
   max-width: 480px;
   min-height: 100vh;
-  background-image: url(img/bg-template.png);
+  background-image: url(img/template-animasi/bg-template.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -663,7 +663,7 @@
   width: 100%;
   max-width: 480px;
   min-height: 100vh;
-  background-image: url(img/bg-template.png);
+  background-image: url(img/template-animasi/bg-template.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
