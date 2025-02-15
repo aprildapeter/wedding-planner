@@ -135,6 +135,13 @@
   font-size: 13px;
   font-weight: bold;
 }
+
+#open-undangan .nama-tamu{
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: bold;
+}
+
 #open-undangan p {
   color: var(--text-primary);
   font-size: 12px;

@@ -1,9 +1,8 @@
 const rootElement = document.documentElement;
 const body = document.body;
 const openUndangan = document.getElementById("open-undangan");
-const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
-const audioIcon = document.querySelector('.speaker');
-
+const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+const audioIcon = document.querySelector(".speaker");
 
 function disableScroll() {
   window.scrollTo(0, 0);
@@ -22,20 +21,19 @@ function playAudio() {
 audioIconWrapper.onclick = function () {
   if (isPlaying) {
     song.pause();
-    audioIcon.src = 'img/template-animasi/mute.png';
+    audioIcon.src = "img/template-animasi/mute.png";
   } else {
     song.play();
-    audioIcon.src = 'img/template-animasi/noisy.png';
+    audioIcon.src = "img/template-animasi/noisy.png";
   }
 
   isPlaying = !isPlaying;
-}
+};
 
 function enableScroll() {
-  
   // Tambahkan animasi keluar
   openUndangan.classList.add("d");
-  
+
   // Hapus elemen setelah transisi selesai
   setTimeout(() => {
     body.style.overflow = "auto";
@@ -49,3 +47,8 @@ function enableScroll() {
 
 disableScroll();
 
+// nama tamu undangan
+const urlParams = new URLSearchParams(window.location.search);
+const nama = urlParams.get("to") || "";
+const namaContainer = document.querySelector("#open-undangan .nama-tamu span");
+namaContainer.innerText = `${nama}`.replace(/ ,$/, ",");
