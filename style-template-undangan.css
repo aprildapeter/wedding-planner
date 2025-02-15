@@ -28,6 +28,44 @@
   background: var(--bg-primary);
 }
 
+#all nav {
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#all nav .speaker{
+  position: absolute;
+  left: 10px;
+  bottom: 80px;
+}
+
+#all nav .container a {
+  position: relative;
+  display: inline-block;
+}
+
+#all nav .container a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#all nav .container a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* OPEN UNDANGAN */
 .undangan-title {
   display: inline-block;
@@ -671,7 +709,7 @@
   border: none;
 }
 
-#kehadiran-tamu .container h2{
+#kehadiran-tamu .container h2 {
   font-size: 16px;
   font-weight: bold;
   color: var(--text-primary);
@@ -693,22 +731,19 @@
   width: 100%;
 }
 
-#kehadiran-tamu .ucapan-tamu .card h3{
+#kehadiran-tamu .ucapan-tamu .card h3 {
   font-size: 14px;
   font-weight: bold;
   color: var(--text-primary);
 }
 
-
-#kehadiran-tamu .ucapan-tamu .card h5{
+#kehadiran-tamu .ucapan-tamu .card h5 {
   font-size: 10px;
   color: var(--text-secondary);
-
 }
-#kehadiran-tamu .ucapan-tamu .card h6{
+#kehadiran-tamu .ucapan-tamu .card h6 {
   font-size: 10px;
   color: var(--text-secondary);
-
 }
 
 #footer {
@@ -718,14 +753,14 @@
 
 #footer .container {
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 5rem;
   width: 100%;
   max-width: 480px;
   min-height: auto;
-  background-color: #2e4374;
+  background-color: #16404d;
 }
 
-#footer .container h3{
+#footer .container h3 {
   font-size: 14px;
   color: var(--bg-primary);
 }
