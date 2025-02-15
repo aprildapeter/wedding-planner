@@ -1224,7 +1224,7 @@
     transform: translateX(-15px) scale(1);
   }
   50% {
-    transform: translateX(-15px) scale(1.1); /* Zoom in */
+    transform: translateX(-15px) scale(1.2); /* Zoom in */
   }
   100% {
     transform: translateX(-15px) scale(1);
