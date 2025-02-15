@@ -933,7 +933,7 @@
   }
 
   #story .timeline li .timeline-image {
-    top: 31px;
+    top: 35px;
   }
 
   #story .timeline li .timeline-panel .timeline-heading::before {
@@ -1029,7 +1029,9 @@
   }
 
   #story .timeline li .timeline-image {
-    top: 31px;
+    top: 35px;
+    width: 25px;
+    height: 25px;
   }
 
   #story .timeline li .timeline-panel .timeline-heading::before {
@@ -1217,5 +1219,20 @@
   animation: swingReverse 3s ease-in-out infinite;
 }
 
+@keyframes zoomInOut {
+  0% {
+    transform: translateX(-15px) scale(1);
+  }
+  50% {
+    transform: translateX(-15px) scale(1.1); /* Zoom in */
+  }
+  100% {
+    transform: translateX(-15px) scale(1);
+  }
+}
+
+.zoom-animation {
+  animation: zoomInOut 3s ease-in-out infinite;
+}
 
 /* ANIMASI */
