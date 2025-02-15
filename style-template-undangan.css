@@ -33,7 +33,7 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
-#all nav .speaker{
+#all nav .speaker {
   position: absolute;
   left: 10px;
   bottom: 80px;
@@ -136,7 +136,7 @@
   font-weight: bold;
 }
 
-#open-undangan .nama-tamu{
+#open-undangan .nama-tamu {
   color: var(--text-primary);
   font-size: 18px;
   font-weight: bold;
@@ -192,8 +192,8 @@
   transform: translateX(-50%);
 }
 #open-undangan .flower-4 {
-  left: 80%;
-  transform: translateX(-80%);
+  left: 70%;
+  transform: translateX(-70%);
 }
 #open-undangan .flower-5 {
   right: 0;
@@ -1079,3 +1079,143 @@
 
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATE UNDANGAN +++++++++++++++++++++++++++++++++++++++++++++++ */
 }
+
+/* ANIMASI */
+
+@keyframes bounceInfinite {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-8px);
+  }
+}
+
+.bounce-loop {
+  animation: bounceInfinite 3s ease-in-out infinite;
+}
+
+@keyframes bounceReverse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(8px);
+  }
+}
+
+.bounce-reverse {
+  animation: bounceReverse 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floatingReverse {
+  0% {
+    transform: translateY(0) scaleX(-1);
+  }
+  50% {
+    transform: translateY(10px) scaleX(-1);
+  }
+  100% {
+    transform: translateY(0) scaleX(-1);
+  }
+}
+
+.floating-reverse-mirror {
+  animation: floatingReverse 3s ease-in-out infinite;
+}
+
+@keyframes floatingReverseFlipX {
+  0% {
+    transform: translateY(0) scaleY(-1);
+  }
+  50% {
+    transform: translateY(10px) scaleY(-1);
+  }
+  100% {
+    transform: translateY(0) scaleY(-1);
+  }
+}
+
+.floating-reverse-flip-x {
+  animation: floatingReverseFlipX 3s ease-in-out infinite;
+}
+
+@keyframes floatingReverseFlipY {
+  0% {
+    transform: translateY(0) scaleX(-1) scaleY(-1);
+  }
+  50% {
+    transform: translateY(-10px) scaleX(-1) scaleY(-1);
+  }X  100% {
+    transform: translateY(0) scaleX(-1) scaleY(-1);
+  }
+}
+
+.floating-reverse-flip-y {
+  animation: floatingReverseFlipY 3s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.swing-loop {
+  animation: swing 3s ease-in-out infinite;
+}
+
+@keyframes swingReverse {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.swing-reverse {
+  animation: swingReverse 3s ease-in-out infinite;
+}
+
+
+/* ANIMASI */
