@@ -119,7 +119,8 @@ $(document).ready(function () {
         bottom: "100px",
         left: "50%",
         transform: "translateX(-50%)",
-        width: "70%",
+        width: "250px",
+        maxWidth: "480px",
         background: "rgba(117, 123, 137, 0.7)",
         color: "white",
         padding: "10px 20px",
@@ -127,7 +128,7 @@ $(document).ready(function () {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: "14px",
+        fontSize: "12px",
         zIndex: 1000,
       });
     $("body").append($notification);
